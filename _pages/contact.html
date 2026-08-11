@@ -1,0 +1,86 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
+<div class="container">
+  <div class="page-header">
+    <p class="section-label">Get in touch</p>
+    <h1 class="section-title">Contact</h1>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="contact-layout">
+
+    <!-- Left: details -->
+    <div class="fade-in">
+      <p class="contact-intro">Open to research collaborations, project partnerships, speaking invitations, and good conversations about data, economics, and policy.</p>
+
+      <ul class="contact-detail-list">
+        <li>
+          <span class="contact-detail-label">Email</span>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </li>
+        <li>
+          <span class="contact-detail-label">Location</span>
+          <span>{{ site.author.location }}</span>
+        </li>
+        {% if site.author.github %}
+        <li>
+          <span class="contact-detail-label">GitHub</span>
+          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">github.com/{{ site.author.github }}</a>
+        </li>
+        {% endif %}
+        {% if site.author.linkedin %}
+        <li>
+          <span class="contact-detail-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener">linkedin.com/in/{{ site.author.linkedin }}</a>
+        </li>
+        {% endif %}
+        {% if site.author.scholar %}
+        <li>
+          <span class="contact-detail-label">Scholar</span>
+          <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar profile</a>
+        </li>
+        {% endif %}
+        {% if site.author.orcid %}
+        <li>
+          <span class="contact-detail-label">ORCID</span>
+          <a href="https://orcid.org/{{ site.author.orcid }}" target="_blank" rel="noopener">{{ site.author.orcid }}</a>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <!-- Right: contact form -->
+    <!-- Sign up free at formspree.io, get your form ID, replace YOUR_FORM_ID below -->
+    <form class="contact-form fade-in" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required placeholder="Jane Smith">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required placeholder="jane@example.com">
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="">Select a topic…</option>
+          <option>Research collaboration</option>
+          <option>Project inquiry</option>
+          <option>Speaking invitation</option>
+          <option>General question</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Tell me what's on your mind…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark">Send message</button>
+    </form>
+
+  </div>
+</div>

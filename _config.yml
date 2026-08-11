@@ -1,0 +1,81 @@
+title: "Your Full Name"
+tagline: "Researcher · Data Scientist · Economist"
+description: "Personal academic and professional portfolio"
+email: undiandeyeirene@gmail.com
+url: "https://ireneundiandye.github.io"
+baseurl: ""
+
+author:
+  name: "Irene Undiandeye"
+  title: "MSc Economics | Data Science & Policy Analysis"
+  institution: "Martin-Luther-Universität Halle-Wittenberg . Leibniz-Institut für Agrarentwicklung in Transformationsökonomien (IAMO)"
+  location: "Leipzig, Germany"
+  bio: "Write one or two sentences about your research focus, professional interests, and what drives your work."
+  github: ireneundiandye
+  linkedin: www.linkedin.com/in/ireneundiandeye
+  twitter: 
+  
+
+
+# Navigation pages
+nav_pages:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /projects/
+  - title: Publications
+    url: /publications/
+  - title: News
+    url: /news/
+  - title: CV
+    url: /cv/
+  - title: Contact
+    url: /contact/
+
+# Jekyll settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  publications:
+    output: true
+    permalink: /publications/:name/
+  news:
+    output: true
+    permalink: /news/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: news-post
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+
+exclude:
+  - Gemfile.lock
+  - node_modules
+  - README.md

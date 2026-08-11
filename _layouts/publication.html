@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="container page-body">
+  <a href="{{ '/publications/' | relative_url }}" style="font-size:0.78rem;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:40px;">← All Publications</a>
+
+  <p class="section-label">{{ page.pub_type | capitalize }} · {{ page.year }}</p>
+  <h1 style="margin-bottom:16px;">{{ page.title }}</h1>
+  <p style="font-size:0.9rem;color:var(--ink-muted);margin-bottom:6px;">{{ page.authors }}</p>
+  <p style="font-size:0.9rem;font-style:italic;color:var(--warm);margin-bottom:28px;">{{ page.venue }}</p>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:48px;">
+    {% if page.pdf %}<a href="{{ page.pdf }}" class="btn btn-dark" target="_blank">PDF</a>{% endif %}
+    {% if page.doi %}<a href="https://doi.org/{{ page.doi }}" class="btn btn-outline" target="_blank">DOI</a>{% endif %}
+    {% if page.arxiv %}<a href="https://arxiv.org/abs/{{ page.arxiv }}" class="btn btn-outline" target="_blank">arXiv</a>{% endif %}
+    {% if page.code %}<a href="{{ page.code }}" class="btn btn-outline" target="_blank">Code</a>{% endif %}
+    {% if page.slides %}<a href="{{ page.slides }}" class="btn btn-outline" target="_blank">Slides</a>{% endif %}
+  </div>
+
+  {% if page.abstract %}
+  <div style="background:var(--bg-subtle);border-left:3px solid var(--warm);padding:20px 24px;border-radius:0 var(--radius) var(--radius) 0;margin-bottom:36px;">
+    <p style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;">Abstract</p>
+    <p style="font-size:0.9rem;color:var(--ink-muted);line-height:1.8;margin:0;">{{ page.abstract }}</p>
+  </div>
+  {% endif %}
+
+  <div style="max-width:680px;color:var(--ink-muted);font-size:0.95rem;line-height:1.85;">
+    {{ content }}
+  </div>
+</div>

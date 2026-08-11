@@ -1,0 +1,185 @@
+---
+layout: default
+title: CV
+permalink: /cv/
+---
+
+<div class="container">
+  <div class="page-header">
+    <p class="section-label">Curriculum Vitae</p>
+    <h1 class="section-title">{{ site.author.name }}</h1>
+    <div class="section-rule"></div>
+    <p style="color:var(--ink-muted); font-size:0.9rem;">{{ site.author.title }} · {{ site.author.institution }}</p>
+  </div>
+
+  <!-- Download bar -->
+  <div class="cv-download-bar">
+    <p>Prefer a PDF version of my full CV?</p>
+    <a href="{{ '/assets/pdf/cv.pdf' | relative_url }}" class="btn btn-warm" download>Download PDF</a>
+  </div>
+
+  <div class="cv-layout">
+
+    <!-- Side navigation -->
+    <nav>
+      <ul class="cv-nav" id="cvNav">
+        <li><a href="#education" class="active">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#languages">Languages</a></li>
+      </ul>
+    </nav>
+
+    <!-- CV content -->
+    <div class="cv-content">
+
+      <!-- Education -->
+      <div class="cv-section" id="education">
+        <div class="cv-section-title">Education</div>
+
+        <div class="cv-item fade-in">
+          <div class="cv-date">2022 – Present</div>
+          <div>
+            <div class="cv-role">MSc Economics — Data Science & Policy Analysis</div>
+            <div class="cv-org">Martin-Luther-Universität Halle-Wittenberg, Germany</div>
+            <div class="cv-desc">Coursework in advanced econometrics, development economics, causal inference, and data science methods. Thesis: [Your thesis title].</div>
+          </div>
+        </div>
+
+        <div class="cv-item fade-in">
+          <div class="cv-date">Year – Year</div>
+          <div>
+            <div class="cv-role">Your Previous Degree</div>
+            <div class="cv-org">University Name, Country</div>
+            <div class="cv-desc">Brief description of your undergraduate studies.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="cv-section" id="experience">
+        <div class="cv-section-title">Professional Experience</div>
+
+        <div class="cv-item fade-in">
+          <div class="cv-date">2023 – Present</div>
+          <div>
+            <div class="cv-role">Student Research Assistant</div>
+            <div class="cv-org">IAMO — Leibniz Institute of Agricultural Development in Transition Economies</div>
+            <div class="cv-desc">
+              <ul>
+                <li>Data documentation and codebook generation for the RuWell Survey (rural well-being data across Albania, Kosovo, Moldova, and Romania)</li>
+                <li>Dataset management and cleaning for the SUSADICA dataset in Stata</li>
+                <li>Team reporting on data changes and methodology updates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-item fade-in">
+          <div class="cv-date">Year – Year</div>
+          <div>
+            <div class="cv-role">Your Other Role</div>
+            <div class="cv-org">Organisation Name</div>
+            <div class="cv-desc">Brief description of responsibilities and key achievements.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research -->
+      <div class="cv-section" id="research">
+        <div class="cv-section-title">Research Interests</div>
+        <div class="fade-in" style="font-size:0.9rem; color:var(--ink-muted); line-height:1.8;">
+          <p>List your research interests here — e.g. Development Economics · Rural Well-being · Agricultural Policy · Causal Inference · Data Science for Policy · Panel Data Methods</p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="cv-section" id="skills">
+        <div class="cv-section-title">Technical Skills</div>
+        <div class="cv-skills-grid fade-in">
+          <div>
+            <div class="cv-skill-group-title">Programming & Data</div>
+            <div class="cv-skill-tags">
+              <span class="tag">Python</span>
+              <span class="tag">R</span>
+              <span class="tag">Stata</span>
+              <span class="tag">SQL</span>
+              <span class="tag">MATLAB</span>
+            </div>
+          </div>
+          <div>
+            <div class="cv-skill-group-title">Tools & Platforms</div>
+            <div class="cv-skill-tags">
+              <span class="tag">Tableau</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">SAP Analytics Cloud</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+          <div>
+            <div class="cv-skill-group-title">Methods</div>
+            <div class="cv-skill-tags">
+              <span class="tag">Panel Data</span>
+              <span class="tag">Causal Inference</span>
+              <span class="tag">DiD</span>
+              <span class="tag">IV</span>
+              <span class="tag">RDD</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+          </div>
+          <div>
+            <div class="cv-skill-group-title">Other</div>
+            <div class="cv-skill-tags">
+              <span class="tag">LaTeX</span>
+              <span class="tag">Excel</span>
+              <span class="tag">QGIS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards -->
+      <div class="cv-section" id="awards">
+        <div class="cv-section-title">Awards & Grants</div>
+        <div class="cv-item fade-in">
+          <div class="cv-date">Year</div>
+          <div>
+            <div class="cv-role">Award or Grant Name</div>
+            <div class="cv-org">Awarding Institution</div>
+            <div class="cv-desc">Brief description if needed.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service -->
+      <div class="cv-section" id="service">
+        <div class="cv-section-title">Service & Outreach</div>
+        <div class="cv-item fade-in">
+          <div class="cv-date">Year – Present</div>
+          <div>
+            <div class="cv-role">Your Role / Position</div>
+            <div class="cv-org">Organisation Name</div>
+            <div class="cv-desc">Brief description.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="cv-section" id="languages">
+        <div class="cv-section-title">Languages</div>
+        <div class="cv-item fade-in">
+          <div class="cv-date">Native</div>
+          <div><div class="cv-role">English, Igbo</div></div>
+        </div>
+        <div class="cv-item fade-in">
+          <div class="cv-date">B1–B2</div>
+          <div><div class="cv-role">German</div></div>
+        </div>
+      </div>
+
+    </div><!-- end cv-content -->
+  </div><!-- end cv-layout -->
+</div>

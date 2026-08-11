@@ -1,0 +1,77 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<div class="container">
+  <div class="page-header">
+    <p class="section-label">My work</p>
+    <h1 class="section-title">Projects</h1>
+    <div class="section-rule"></div>
+    <p style="color:var(--ink-muted); font-size:0.95rem; max-width:560px;">
+      A collection of academic research, career-driven applications, and curiosity-led explorations across data science, economics, and beyond.
+    </p>
+  </div>
+
+  <!-- Tab bar -->
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="academic">Academic</button>
+    <button class="tab-btn" data-tab="career">Career</button>
+    <button class="tab-btn" data-tab="curiosity">Curiosity</button>
+  </div>
+
+  <!-- Academic projects -->
+  <div class="tab-panel active" id="tab-academic">
+    {% assign academic = site.projects | where: "category", "academic" %}
+    {% for project in academic %}
+    <article class="project-card fade-in">
+      <div class="project-cat">Academic</div>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+      <div class="project-card-footer">
+        <div class="card-tags">
+          {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+        <a href="{{ project.url | relative_url }}" class="card-link">View →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <!-- Career projects -->
+  <div class="tab-panel" id="tab-career">
+    {% assign career = site.projects | where: "category", "career" %}
+    {% for project in career %}
+    <article class="project-card fade-in">
+      <div class="project-cat">Career</div>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+      <div class="project-card-footer">
+        <div class="card-tags">
+          {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+        <a href="{{ project.url | relative_url }}" class="card-link">View →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <!-- Curiosity projects -->
+  <div class="tab-panel" id="tab-curiosity">
+    {% assign curiosity = site.projects | where: "category", "curiosity" %}
+    {% for project in curiosity %}
+    <article class="project-card fade-in">
+      <div class="project-cat">Curiosity</div>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+      <div class="project-card-footer">
+        <div class="card-tags">
+          {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+        <a href="{{ project.url | relative_url }}" class="card-link">View →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>

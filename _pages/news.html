@@ -1,0 +1,73 @@
+---
+layout: default
+title: News
+permalink: /news/
+---
+
+<div class="container">
+  <div class="page-header">
+    <p class="section-label">Latest updates</p>
+    <h1 class="section-title">News</h1>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="news-grid">
+
+    <!-- Main news feed -->
+    <div class="news-main">
+      {% assign all_news = site.news | sort: "date" | reverse %}
+      {% for item in all_news %}
+      <article class="news-post-card fade-in">
+        <div class="news-post-meta">
+          <span class="news-type-badge badge-{{ item.type }}">{{ item.type }}</span>
+          <span class="news-post-date">{{ item.date | date: "%B %-d, %Y" }}</span>
+        </div>
+        <h2 class="news-post-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+        <p class="news-post-excerpt">{{ item.excerpt | strip_html | truncatewords: 40 }}</p>
+        <a href="{{ item.url | relative_url }}" class="read-more">Read more →</a>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="news-sidebar">
+
+      <!-- Quick announcements -->
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">Quick updates</div>
+        {% assign announcements = site.news | where: "type", "news" | sort: "date" | reverse | limit: 5 %}
+        {% for item in announcements %}
+        <div class="sidebar-item">
+          <a href="{{ item.url | relative_url }}">{{ item.title | truncatewords: 8 }}</a>
+          <span style="font-size:0.72rem; color:var(--ink-faint); white-space:nowrap;">{{ item.date | date: "%b %y" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Conferences -->
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">Conferences</div>
+        {% assign conf_news = site.news | where: "type", "conference" | sort: "date" | reverse | limit: 4 %}
+        {% for item in conf_news %}
+        <div class="sidebar-item">
+          <a href="{{ item.url | relative_url }}">{{ item.title | truncatewords: 8 }}</a>
+          <span style="font-size:0.72rem; color:var(--ink-faint); white-space:nowrap;">{{ item.date | date: "%b %y" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Publications -->
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">Recent publications</div>
+        {% assign pub_news = site.news | where: "type", "publication" | sort: "date" | reverse | limit: 4 %}
+        {% for item in pub_news %}
+        <div class="sidebar-item">
+          <a href="{{ item.url | relative_url }}">{{ item.title | truncatewords: 8 }}</a>
+          <span style="font-size:0.72rem; color:var(--ink-faint); white-space:nowrap;">{{ item.date | date: "%b %y" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+
+    </aside>
+  </div>
+</div>

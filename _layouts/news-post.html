@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="container page-body">
+  <a href="{{ '/news/' | relative_url }}" style="font-size:0.78rem;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:40px;">← All News</a>
+
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+    <span class="news-type-badge badge-{{ page.type }}">{{ page.type }}</span>
+    <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--ink-faint);">{{ page.date | date: "%B %-d, %Y" }}</span>
+  </div>
+
+  <h1 style="margin-bottom:40px;">{{ page.title }}</h1>
+
+  <div style="max-width:680px;color:var(--ink-muted);font-size:0.95rem;line-height:1.9;">
+    {{ content }}
+  </div>
+</div>
