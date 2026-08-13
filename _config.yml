@@ -1,4 +1,4 @@
-title: "Your Full Name"
+title: ""
 tagline: "Researcher · Data Scientist · Economist"
 description: "Personal academic and professional portfolio"
 email: undiandeyeirene@gmail.com
@@ -10,10 +10,10 @@ author:
   title: "MSc Economics | Data Science & Policy Analysis"
   institution: "Martin-Luther-Universität Halle-Wittenberg . Leibniz-Institut für Agrarentwicklung in Transformationsökonomien (IAMO)"
   location: "Leipzig, Germany"
-  bio: "Write one or two sentences about your research focus, professional interests, and what drives your work."
-  github: ireneundiandye
+  bio: "Data analyst and economist with a strong foundation in data science, policy analysis, and business operations. Currently pursuing an MSc in Economics at Martin-Luther-Universität Halle-Wittenberg and working as a Student Assistant at IAMO, Leipzig, where I analyse multi-country rural well-being data across transition economies in Albania, Kosovo, Moldova, and Romania, curate datasets for publication, and support the organisation of workshops and conferences for the RuWell project. With prior experience at Vanir Capital LLC and Swappie, and proficiency in Python, R, SQL, Tableau, and SAP Analytics Cloud, I turn data into actionable insights across both research and industry settings."
+  github: ireneundiandeye
   linkedin: www.linkedin.com/in/ireneundiandeye
-  twitter: 
+  Email: undiandeyeirene@gmail.com
   
 
 
@@ -23,7 +23,7 @@ nav_pages:
     url: /
   - title: Projects
     url: /projects/
-  - title: Publications
+  - title: Publicatio
     url: /publications/
   - title: News
     url: /news/
