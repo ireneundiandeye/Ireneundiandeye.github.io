@@ -13,7 +13,7 @@ author:
   title: "MSc Economics | Data Science & Policy Analysis"
   institution: "Martin-Luther-Universität Halle-Wittenberg . Leibniz-Institut für Agrarentwicklung in Transformationsökonomien (IAMO)"
   location: "Halle, Germany"
-  bio: "Data analyst and economist with a strong foundation in data science, policy analysis, and business operations. Currently pursuing an MSc in Economics: Data science and policy analysis at Martin-Luther-Universität Halle-Wittenberg and working as a Student Assistant at IAMO, Leipzig, where I analyse multi-country rural well-being data across transition economies in Albania, Kosovo, Moldova, and Romania, curate datasets for publication, and support the organisation of workshops and conferences for the RuWell project. With prior experience at Vanir Capital LLC and Swappie, and proficiency in Python, R, SQL, Tableau, and SAP Analytics Cloud, I turn data into actionable insights across both research and industry settings."
+  bio: "Data analyst and economist with a strong foundation in data science, policy analysis, and business operations. Currently pursuing an MSc in Economics: Data science and policy analysis at Martin-Luther-Universität Halle-Wittenberg and working as a Student Assistant at IAMO, Halle, where I analyse multi-country rural well-being data across transition economies in Albania, Kosovo, Moldova, and Romania, curate datasets for publication, and support the organisation of workshops and conferences for the RuWell project. With prior experience at Vanir Capital LLC and Swappie, and proficiency in Python, R, SQL, Tableau, and SAP Analytics Cloud, I turn data into actionable insights across both research and industry settings."
   github: ireneundiandeye
   linkedin: ireneundiandeye 
   
@@ -40,7 +40,7 @@ nav_pages:
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-future: true
+future:  true
 
 plugins:
   - jekyll-feed
