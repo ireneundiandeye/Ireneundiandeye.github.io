@@ -1,4 +1,3 @@
-
 ---
 title: "My Personal Website is Now Live!"
 date: 2024-01-01
