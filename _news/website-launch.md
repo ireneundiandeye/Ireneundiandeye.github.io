@@ -1,7 +1,7 @@
 
 ---
 title: "My Personal Website is Now Live!"
-date: 2026-08-13
+date: 2024-01-01
 type: news
 short: "Excited to share my new personal portfolio website featuring my projects, publications, and CV."
 ---
