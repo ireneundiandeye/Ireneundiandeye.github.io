@@ -1,4 +1,7 @@
-title: ""
+include:
+  - _pages
+
+title: "Irene Undiandeye"
 tagline: "Researcher · Data Scientist · Economist"
 description: "Personal academic and professional portfolio"
 email: undiandeyeirene@gmail.com
