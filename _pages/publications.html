@@ -11,44 +11,11 @@ permalink: /publications/
     <div class="section-rule"></div>
   </div>
 
-  <!-- Filter buttons -->
-  <div class="pub-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="journal">Journal Articles</button>
-    <button class="filter-btn" data-filter="conference">Conference Papers</button>
-    <button class="filter-btn" data-filter="working">Working Papers</button>
+  <div style="text-align:center; padding:48px 0; color:var(--ink-faint);">
+    <p style="font-family:var(--font-mono); font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">Coming soon</p>
+    <p style="font-size:0.9rem; margin-top:8px; color:var(--ink-muted);">Publications will be listed here as they become available.</p>
   </div>
 
-  <!-- Publications list grouped by year -->
-  {% assign pubs_by_year = site.publications | sort: "year" | reverse | group_by: "year" %}
-  {% assign counter = site.publications | size %}
-
-  {% for year_group in pubs_by_year %}
-  <div class="pub-year-group" data-year="{{ year_group.name }}">
-    <div class="pub-year-heading">{{ year_group.name }}</div>
-    {% for pub in year_group.items %}
-    <div class="pub-entry fade-in" data-type="{{ pub.pub_type }}">
-      <div class="pub-number">[{{ counter }}]</div>
-      <div>
-        <div class="pub-entry-title"><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></div>
-        <div class="pub-entry-authors">{{ pub.authors }}</div>
-        <div class="pub-entry-venue">{{ pub.venue }}</div>
-        <div class="pub-links">
-          {% if pub.pdf %}<a href="{{ pub.pdf }}" class="pub-link" target="_blank">PDF</a>{% endif %}
-          {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" class="pub-link" target="_blank">DOI</a>{% endif %}
-          {% if pub.arxiv %}<a href="https://arxiv.org/abs/{{ pub.arxiv }}" class="pub-link" target="_blank">arXiv</a>{% endif %}
-          {% if pub.code %}<a href="{{ pub.code }}" class="pub-link" target="_blank">Code</a>{% endif %}
-          {% if pub.slides %}<a href="{{ pub.slides }}" class="pub-link" target="_blank">Slides</a>{% endif %}
-        </div>
-      </div>
-    </div>
-    {% assign counter = counter | minus: 1 %}
-    {% endfor %}
-  </div>
-  {% endfor %}
-
-  <!-- Conferences & Workshops -->
-  <!-- Conferences & Workshops -->
   <div style="margin-top: 72px;">
     <p class="section-label">Events attended</p>
     <h2 class="section-title">Conferences & Workshops</h2>
@@ -58,3 +25,4 @@ permalink: /publications/
       <p style="font-size:0.9rem; margin-top:8px; color:var(--ink-muted);">Conference and workshop attendance will be listed here.</p>
     </div>
   </div>
+</div>
