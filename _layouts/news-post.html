@@ -1,17 +1,60 @@
 ---
 layout: default
+title: News
+permalink: /news/
 ---
-<div class="container page-body">
-  <a href="{{ '/news/' | relative_url }}" style="font-size:0.78rem;font-family:var(--font-mono);letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);display:inline-flex;align-items:center;gap:6px;margin-bottom:40px;">← All News</a>
 
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-    <span class="news-type-badge badge-{{ page.type }}">{{ page.type }}</span>
-    <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--ink-faint);">{{ page.date | date: "%B %-d, %Y" }}</span>
+<div class="container">
+  <div class="page-header">
+    <p class="section-label">Latest updates</p>
+    <h1 class="section-title">News</h1>
+    <div class="section-rule"></div>
   </div>
 
-  <h1 style="margin-bottom:40px;">{{ page.title }}</h1>
+  <div class="news-grid">
+    <div class="news-main">
+      {% assign all_news = site.news | sort: "date" | reverse %}
+      {% if all_news.size == 0 %}
+      <div style="padding:40px 0; color:var(--ink-muted);">
+        <p>No news posts yet. Check back soon!</p>
+      </div>
+      {% else %}
+      {% for item in all_news %}
+      <article class="news-post-card fade-in">
+        <div class="news-post-meta">
+          <span class="news-type-badge badge-{{ item.type }}">{{ item.type }}</span>
+          <span class="news-post-date">{{ item.date | date: "%B %-d, %Y" }}</span>
+        </div>
+        <h2 class="news-post-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+        <p class="news-post-excerpt">{{ item.content | strip_html | truncatewords: 40 }}</p>
+        <a href="{{ item.url | relative_url }}" class="read-more">Read more →</a>
+      </article>
+      {% endfor %}
+      {% endif %}
+    </div>
 
-  <div style="max-width:680px;color:var(--ink-muted);font-size:0.95rem;line-height:1.9;">
-    {{ content }}
+    <aside class="news-sidebar">
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">Quick updates</div>
+        {% assign news_items = site.news | where: "type", "news" | sort: "date" | reverse %}
+        {% for item in news_items limit: 5 %}
+        <div class="sidebar-item">
+          <a href="{{ item.url | relative_url }}">{{ item.title | truncatewords: 8 }}</a>
+          <span style="font-size:0.72rem; color:var(--ink-faint);">{{ item.date | date: "%b %y" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-title">Conferences</div>
+        {% assign conf_items = site.news | where: "type", "conference" | sort: "date" | reverse %}
+        {% for item in conf_items limit: 4 %}
+        <div class="sidebar-item">
+          <a href="{{ item.url | relative_url }}">{{ item.title | truncatewords: 8 }}</a>
+          <span style="font-size:0.72rem; color:var(--ink-faint);">{{ item.date | date: "%b %y" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </aside>
   </div>
 </div>
