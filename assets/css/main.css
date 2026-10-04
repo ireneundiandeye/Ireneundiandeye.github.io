@@ -799,3 +799,8 @@ p  { margin-bottom: 1.1rem; }
   .home-stats { grid-template-columns: repeat(2,1fr); }
   .tab-btn { padding: 10px 16px; font-size: 0.72rem; }
 }
+
+/* "Full details" link on project cards */
+.card-more { font-size: 0.85rem; margin: -6px 0 16px; color: var(--ink-muted); }
+.card-more a { color: var(--ink); font-weight: 600; border-bottom: 1px solid currentColor; }
+.card-more a:hover { opacity: 0.7; }
